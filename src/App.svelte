@@ -5,15 +5,13 @@
     import LogIn from './routes/LogIn.svelte'
     import Logout from './routes/Logout.svelte'
     import NotFound from './routes/NotFound.svelte'
-    import {token} from './stores'
+    import {user} from './stores'
     import Errors from "./Errors.svelte";
 
     export let url = "";
-
-
 </script>
 
-{#if $token == null}
+{#if $user.token == null}
     <Errors />
 
     <Router url="{url}">
@@ -21,7 +19,7 @@
     </Router>
 {/if}
 
-{#if $token != null}
+{#if $user.token != null}
     <Router url="{url}">
         <nav>
             <Link to="/">Home</Link>

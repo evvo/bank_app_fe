@@ -1,10 +1,17 @@
-import {errors, token} from './stores.js';
+import {errors, user} from './stores.js';
 import {get} from "svelte/store";
+
+export function clearUser() {
+    user.set({
+        token: null,
+        user_id: null
+    })
+}
 
 async function makeRequest(path, method = 'GET', data, auth = true) {
     const headers = {'content-type': 'application/json'}
     if (auth) {
-        headers.Token = get(token)
+        headers.Token = get(user).token
     }
 
     return await fetch(`API_URL${path}`, {
@@ -20,7 +27,7 @@ async function makeRequest(path, method = 'GET', data, auth = true) {
             }
 
             if (result.errors.auth) {
-                token.set(null)
+                clearUser()
             }
 
             errors.set(result.errors)
@@ -38,7 +45,7 @@ async function makeRequest(path, method = 'GET', data, auth = true) {
 export async function logIn(logInForm) {
     const result = await makeRequest('/login', 'POST', logInForm, false)
     if (result && result.success) {
-        token.set(result.data.token)
+        user.set(result.data)
     }
 }
 

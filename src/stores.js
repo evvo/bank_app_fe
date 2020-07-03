@@ -6,7 +6,10 @@ let augmentedWritable = function (name, defaultValue) {
     return storeObject
 }
 
-export const token = augmentedWritable('token', null)
+export const user = augmentedWritable('token', {
+    token : null,
+    user_id : null
+})
 export const loading = writable(true)
 export const errors = writable([])
 export const mainFilters = writable({

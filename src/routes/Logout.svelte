@@ -1,8 +1,9 @@
 <script>
-    import {token} from '../stores.js';
+    import {user} from '../stores.js';
     import {navigate} from "svelte-routing";
+    import {clearUser} from "../request";
 
-    token.set(null)
+    clearUser()
 
     navigate("/", { replace: true });
 </script>
