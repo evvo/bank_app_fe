@@ -1,0 +1,32 @@
+{
+  "name": "svelte-app",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "@rollup/plugin-replace": "^2.3.3",
+    "rollup": "^2.3.4",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-postcss": "^3.1.2",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "sass": "^1.26.9",
+    "svelte": "^3.0.0",
+    "svelte-material-ui": "^1.0.0-beta.21",
+    "svelte-preprocess": "^3.9.11"
+  },
+  "dependencies": {
+    "@material/layout-grid": "^7.0.0",
+    "@smui/list": "^1.0.0-beta.21",
+    "moment": "^2.27.0",
+    "query-string": "^6.13.1",
+    "sirv-cli": "^0.4.4",
+    "svelte-routing": "^1.4.2",
+    "svelte-select": "^3.8.1"
+  }
+}
