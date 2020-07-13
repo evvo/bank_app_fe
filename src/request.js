@@ -9,10 +9,10 @@ export function clearUser() {
 }
 
 async function makeRequest({ path, method = 'GET', data, auth = true, loadingContext = 'global'}) {
-    const headers = {'content-type': 'application/json'}
+    const headers = { 'Content-Type': 'application/json' }
     errors.set([])
     if (auth) {
-        headers.Token = get(user).token
+        headers.Authorization = `Bearer ${get(user).token}`
     }
 
     startLoading(loadingContext)
