@@ -21,6 +21,8 @@ export default {
 	plugins: [
 		replace({
 			API_URL: 'http://0.0.0.0:3000/api/v1',
+			// Workaround for a problem with EmotionJS
+			'process.env.NODE_ENV': JSON.stringify( production ? 'production' : 'development' )
 		}),
 		svelte({
 			// enable run-time checks when not in production

@@ -74,7 +74,9 @@
     }
 </style>
 
-<Row class="transaction-border {transactionClass}" on:click={() => navigate(`/details?transaction_id=${transaction.id}`, { replace: false })}>
+<Row class="transaction-border {transactionClass}"
+     on:click={() => navigate(`/details?transaction_id=${transaction.id}`)}
+    >
     <Cell class="small"><TransactionDate transaction={transaction} format='MMM. D' /></Cell>
     <Cell class="small user-picture">
         <img src="https://robohash.org/{transaction.to_user.name}?size=70x70">

@@ -3,9 +3,11 @@
     import {navigate} from "svelte-routing";
     import {clearUser} from "../request";
 
+    export let location
+
     clearUser()
 
-    navigate("/", { replace: true });
+    navigate("/");
 </script>
 
 Logging you out...

@@ -1,6 +1,5 @@
 <script>
     import {errors} from './stores.js';
-
 </script>
 
 <style>
@@ -8,6 +7,7 @@
         color: red;
     }
 </style>
+
 {#if $errors}
     <div>
     {#each Object.keys($errors) as errorField}

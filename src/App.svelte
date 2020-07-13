@@ -15,7 +15,7 @@
     <Errors />
 
     <Router url="{url}">
-        <Route path="/*" component={LogIn} />
+        <Route component={LogIn} />
     </Router>
 {/if}
 
@@ -31,7 +31,7 @@
         <div>
             <Route path="/" let:location component="{Home}"/>
             <Route path="/logout" component="{Logout}"/>
-            <Route path="/details" component="{Transaction}"/>
+            <Route path="/details" let:location component="{Transaction}"/>
             <Route component={NotFound} />
         </div>
     </Router>

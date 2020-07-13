@@ -26,6 +26,7 @@
     "moment": "^2.27.0",
     "query-string": "^6.13.1",
     "sirv-cli": "^0.4.4",
+    "svelte-loading-spinners": "0.0.19",
     "svelte-routing": "^1.4.2",
     "svelte-select": "^3.8.1"
   }
