@@ -23,7 +23,7 @@
   "dependencies": {
     "@material/layout-grid": "^7.0.0",
     "@smui/list": "^1.0.0-beta.21",
-    "moment": "^2.27.0",
+    "moment": "^2.29.2",
     "query-string": "^6.13.1",
     "sirv-cli": "^0.4.4",
     "svelte-loading-spinners": "0.0.19",
